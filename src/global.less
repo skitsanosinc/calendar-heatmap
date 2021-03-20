@@ -1,0 +1,132 @@
+@import "~antd/dist/antd.less";
+
+//theme
+@primary-color: #884EA0;
+@link-color: #333;
+
+@font-family: 'Work Sans', sans-serif;
+@font-weight-normal: 300;
+@font-weight-bold: 500;
+
+//spacing
+@margin-size: 1ch;
+
+//shadows
+@shadow-light-inset: inset 0px 0px 5px -3px rgba(0, 0, 0, 0.55);
+@shadow-light: 0px 0px 5px -3px rgba(0, 0, 0, 0.55);
+
+/**
+CSS utils
+ */
+
+h1, h2, h3 {
+  font-weight: @font-weight-normal;
+  color: @primary-color;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+//margins
+.m0 {
+  margin: 0;
+}
+
+.ml {
+  margin-left: @margin-size;
+}
+
+.mr {
+  margin-right: @margin-size;
+}
+
+.mt {
+  margin-top: @margin-size;
+}
+
+.mb {
+  margin-bottom: @margin-size;
+}
+
+//padding
+.p0 {
+  padding: 0;
+}
+
+.p1 {
+  padding: @margin-size;
+}
+
+.pl {
+  padding-left: @margin-size;
+}
+
+.pr {
+  padding-right: @margin-size;
+}
+
+.pt {
+  padding-top: @margin-size;
+}
+
+.pb {
+  padding-bottom: @margin-size;
+}
+
+.shadow {
+  box-shadow: @shadow-light;
+}
+
+.debug {
+  background-color: rgba(213, 245, 227, 0.4);
+}
+
+.text-align-right{
+  text-align: right;
+}
+
+//layout
+.h-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.box-align-center {
+  justify-content: center;
+}
+
+.flex-no-wrap
+{
+  flex-wrap: nowrap;
+}
+
+.day-of-week {
+  background-color: #fafafa;
+  min-width: 55px;
+  padding: @margin-size;
+  text-align: right;
+}
+
+.day-tile {
+  text-align: center;
+  margin: 2px;
+  padding: @margin-size;
+  flex:1;
+  display: flex;
+  justify-content: center;
+
+  > div{
+    cursor: pointer;
+    border: solid 1px #eee;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+}
